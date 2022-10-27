@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>advertisement</title>
+</head>
+<body>
+    <!--<a href={% url 'test' %}>-->
+    <a>
+        <header>
+            画面をタッチしてみよう  
+        </header>
+            <img id='logo' src={% static 'images/logo.jpg' %}>
+            <div class="slide" id="makeImg">
+                <img src={% static 'images/hagiya.jpeg' %}>
+                <img src={% static 'images/APRE.png' %}>
+                <img src={% static 'images/kiraku.png' %}>
+                <img src={% static 'images/kiya.png' %}>
+                <img src={% static 'images/johoku.jpg' %}>
+                <img src={% static 'images/matidukuri.png' %}>
+                <img src={% static 'images/syotengai.png' %}>
+                <img src={% static 'images/yotien.png' %}>
+            </div>
+        <footer>
+            画面をタッチしてみよう
+        </footer>
+    </a>
+</body>
+
+<style>
+body{
+    margin:0;
+}
+
+header{
+    position:relative;
+    width:1080px;
+    height:160px;
+    background:black;
+    color:#fff;
+}
+
+footer{
+    position:absolute;
+    width:1080px;
+    height:160px;
+    background:black;
+    bottom:0;
+    color:#fff;
+}
+
+#logo{
+    position:absolute;
+    width:1080px;
+    height:607px;
+    z-index: 1;
+    margin-top:35%;
+    margin-left:auto;
+}
+
+#inya{
+    position:absolute;
+    z-index: 1;
+    margin-top:50%;
+    margin-left:auto;
+}
+.slide {
+  position   : absolute;
+  overflow   : hidden;
+  width      : 1080px;
+  height     : 1600px;
+  margin     : auto;
+  background : #fff;
+  z-index:auto;
+}
+ 
+.slide img {
+  display    : block;
+  position   : absolute;
+  width      : inherit;
+  height     : inherit;
+  left       : -100%;
+  min-width  : 1080px;
+  min-height : 1600px;
+  animation  : slideAnime 80s ease infinite;
+  z-index:2;
+}
+ 
+ .slide img:nth-of-type(1) { animation-delay: 0s }
+ .slide img:nth-of-type(2) { animation-delay: 10s }
+ .slide img:nth-of-type(3) { animation-delay: 20s }
+ .slide img:nth-of-type(4) { animation-delay: 30s }
+ .slide img:nth-of-type(5) { animation-delay: 40s }
+ .slide img:nth-of-type(6) { animation-delay: 50s }
+ .slide img:nth-of-type(7) { animation-delay: 60s }
+ .slide img:nth-of-type(8) { animation-delay: 70s }
+ 
+@keyframes slideAnime{
+    0% { left: -100% }
+    2% { left: 0     }
+   10% { left: 0     }
+   12% { left: 100%  }
+  100% { left: 100%  }
+}
+
+
+</style>
+
+<script>
+    /*
+    var logo = document.getElementById("logo");
+    setInterval("inya()",25000);
+    
+    
+    function inya(){
+        var random = Math.floor(Math.random() * (3 + 1 - 1)) + 1;
+        if(random <= 3){
+            logo.src="{% static 'images/inya.png' %}";
+            logo.id='inya';
+            console.log('henko');
+            setTimeout('logoFunc()',10000);
+        }
+    }
+
+    function logoFunc(){
+        logo.src="{% static 'images/logo.jpg' %}";
+        logo.id='logo';
+        console.log('modori');
+    }
+    */
+</script>
+</html>
