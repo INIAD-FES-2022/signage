@@ -9,11 +9,10 @@
     <!--<a href={% url 'test' %}>-->
     <a>
         <header>
-            画面をタッチしてみよう  
         </header>
             <img id='logo' src={% static 'images/logo.jpg' %}>
             <div class="slide" id="makeImg">
-                <img src={% static 'images/hagiya.jpeg' %}>
+                <img src={% static 'images/hagiya.png' %}>
                 <img src={% static 'images/APRE.png' %}>
                 <img src={% static 'images/kiraku.png' %}>
                 <img src={% static 'images/kiya.png' %}>
@@ -21,9 +20,9 @@
                 <img src={% static 'images/matidukuri.png' %}>
                 <img src={% static 'images/syotengai.png' %}>
                 <img src={% static 'images/yotien.png' %}>
+                <img src={% static 'images/maenonaika.png' %}>
             </div>
         <footer>
-            画面をタッチしてみよう
         </footer>
     </a>
 </body>
@@ -76,6 +75,7 @@ footer{
 }
  
 .slide img {
+  will-change:animation;
   display    : block;
   position   : absolute;
   width      : inherit;
@@ -83,7 +83,7 @@ footer{
   left       : -100%;
   min-width  : 1080px;
   min-height : 1600px;
-  animation  : slideAnime 80s ease infinite;
+  animation  : slideAnime 100s ease infinite;
   z-index:2;
 }
  
@@ -95,14 +95,18 @@ footer{
  .slide img:nth-of-type(6) { animation-delay: 50s }
  .slide img:nth-of-type(7) { animation-delay: 60s }
  .slide img:nth-of-type(8) { animation-delay: 70s }
+ .slide img:nth-of-type(9) { animation-delay: 80s }
+ .slide img:nth-of-type(10) { animation-delay: 90s }
  
 @keyframes slideAnime{
     0% { left: -100% }
     2% { left: 0     }
-   10% { left: 0     }
-   12% { left: 100%  }
+    8% { left: 0     }
+   10% { left: 100%  }
   100% { left: 100%  }
 }
+
+
 
 
 </style>
