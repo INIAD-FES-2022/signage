@@ -6,10 +6,10 @@ from django.http import HttpResponse
 """
 def test(request):
     return render(request,'test.html')
-"""
-
+    
 def test(request):
     return render(request,'rank.html')
+"""
 
 def adv(request):
     return render(request,'adv.html')
